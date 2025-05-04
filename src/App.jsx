@@ -4,13 +4,13 @@ const Portfolio = lazy(() => import("./Pages/Portfolio"))
 const ProjectForm = lazy(() => import("./Pages/ProjectForm"))
 const Interest = lazy(() => import("./Pages/Interest"))
 import Home from './Pages/Home'
-import NavBar from "./Components/NavBar"
+import Header from "./Components/Header"
 
 export default function App() {
 
   return (
    <>
-   <NavBar />
+   <Header />
    <Suspense fallback={
       <div className="h-screen flex items-center justify-center"
         >
