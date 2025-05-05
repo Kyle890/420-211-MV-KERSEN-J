@@ -2,6 +2,9 @@
 
 export default function Portfolio() {
   return (
-    <h1>Portfolio</h1>
+    <section>
+      <h1>Laissez-moi me présenter</h1>
+      <h2>Nyle Kersen Joseph</h2>
+    </section>
   )
 }
