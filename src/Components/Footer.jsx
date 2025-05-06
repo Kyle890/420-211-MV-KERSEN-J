@@ -12,7 +12,7 @@ export default function Footer() {
 
     return (
         <footer className="h-20 flex justify-evenly items-center bg-[#b1c9ef] ">
-            <p>Designed and developed by Nyle Kersen Joseph</p>
+            <p className="text-[#395886]">Designed and developed by Nyle Kersen Joseph</p>
             <ul className="flex gap-4">
                 {logos.map(({ link, img, text }) => (
                     <li key={text}>
@@ -20,7 +20,7 @@ export default function Footer() {
                     </li>
                 ))}
             </ul>
-            <p>Copyright © 2025 Nyle Kersen Joseph.</p>
+            <p className="text-[#395886]">Copyright © 2025 Nyle Kersen Joseph.</p>
         </footer>
     )
 }
