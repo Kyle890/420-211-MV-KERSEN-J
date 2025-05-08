@@ -1,6 +1,6 @@
 import useTypeWritter from "../hooks/useTypeWritter";
 import webDevelopperImg from "../assets/webDevelopperImg.svg"
-import BentoBox from "../Components/BentoBox";
+import BentoBox from "../Components/BentoBox.jsx"
 
 export default function Portfolio() {
   const phrases = [
