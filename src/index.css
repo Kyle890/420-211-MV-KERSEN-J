@@ -25,4 +25,7 @@
     --font-title: 'ICA Rubrik Black', sans-serif;
     --font-Merienda: "Merienda", sans-serif;
 }
-  
+
+:root{
+  font-family: var(--font-sans);
+}

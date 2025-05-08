@@ -11,7 +11,7 @@ export default function useTypeWritter(phrases){
     useEffect(() => {
       const currentPhrase = phrases[phraseIndex];
       const typingSpeed = isDeleting ? 25 : 75;
-      const pauseBeforeDelete = 2000;
+      const pauseBeforeDelete = 1500;
     
       const handleTyping = () => {
         if (!isDeleting) {
