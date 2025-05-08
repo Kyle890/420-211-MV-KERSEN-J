@@ -1,28 +1,32 @@
 import { useEffect, useState } from "react";
-import avatarSombre from "../assets/AvatarSombre.jpg"
 import useTypeWritter from "../hooks/useTypeWritter";
+import webDevelopperImg from "../assets/webDevelopperImg.svg"
 
 export default function Portfolio() {
   const phrases = [
     "Bonjour, je suis un etudiant.",
-    "J'aime créer des animations.",
-    "Bienvenue dans mon portfolio!",
-    "Laissez-moi me présenter."
+    "Un futur ingénieur en informatique",
+    "Bienvenue dans mon portfolio!"
   ];
 
   const text = useTypeWritter(phrases);
 
   return (
-    <section className="flex flex-col m-8">
-      <div className="flex flex-row gap-4">
-        <div className="flex flex-col">
-          <h1 className="text-white font-bold">{text}<span className="inline-block w-1 animate-pulse">|</span></h1>
-          <h2 className="text-white font-bold">Nyle Kersen Joseph</h2>
+    <main>
+      <section className="flex flex-row gap-10 ml-32 mr-32 mt-5 mb-5">
+        <div className="flex w-[50%] justify-center items-center">
+        <h1 className="font-test font-extrabold text-3xl uppercase">
+          {/*text-center bg-gradient-to-r from-pink-400 via-indigo-400 to-blue-400 bg-200% bg-clip-text text-transparent animate-gradient */}
+          {text}
+        </h1>
         </div>
-        <div className="flex">
-          <img className="h-40 rounded-2xl" src={avatarSombre} alt="avatar photo" />
+        <div className="flex w-[35%]">
+          <img src={webDevelopperImg} alt="webDevelopperImg" />
         </div>
+      </section>
+      <div>
+        
       </div>
-    </section>
+    </main>
   )
 }

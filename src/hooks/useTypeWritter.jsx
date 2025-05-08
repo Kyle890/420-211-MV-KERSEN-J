@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+// Je crée un hook, car c'est un code que je risque surement d'utliser dans une autre page.
 export default function useTypeWritter(phrases){
 
     const [text, setText] = useState("");
