@@ -11,7 +11,7 @@ export default function Footer() {
     ]
 
     return (
-        <footer className="h-20 flex justify-evenly items-center bg-[#b1c9ef] ">
+        <footer className="h-20 flex justify-evenly items-center bg-[#E2E2E2] ">
             <p className="text-[#395886]">Designed and developed by Nyle Kersen Joseph</p>
             <ul className="flex gap-4">
                 {logos.map(({ link, img, text }) => (

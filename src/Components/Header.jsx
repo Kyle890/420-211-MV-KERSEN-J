@@ -16,8 +16,7 @@ export default function Header() {
                 <defs>
                 <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="0%" stopColor="#395886" />
-                    <stop offset="70%" stopColor="#8AAEE0" />
-                    <stop offset="100%" stopColor="#B1C9EF" />
+                    <stop offset="70%" stopColor="#E2E2E2" />
                 </linearGradient>
                 </defs>
                 <path

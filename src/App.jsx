@@ -10,7 +10,7 @@ const Interest = lazy(() => import("./Pages/Interest"))
 export default function App() {
 
   return (
-   <div className="flex flex-col min-h-screen bg-[#b1c9ef]">
+   <div className="flex flex-col min-h-screen bg-[#E2E2E2]">
     <Header />
     <div className="flex-grow">
       <Suspense fallback={
