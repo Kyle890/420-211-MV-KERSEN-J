@@ -3,7 +3,7 @@ import NavBar from './NavBar'
 export default function Header() {
   return (
         <>
-            <header className='h-20 flex justify-evenly items-center bg-black'>
+            <header className='h-20 flex justify-evenly items-center bg-[#A9A9A9]'>
                 <h1 className='font-extrabold text-2xl text-white'>Kersen Joseph</h1>
                 <NavBar></NavBar>
             </header>
@@ -15,7 +15,7 @@ export default function Header() {
             >
                 <defs>
                 <linearGradient id="grad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="black" />
+                    <stop offset="0%" stopColor="#A9A9A9" />
                     <stop offset="70%" stopColor="#E2E2E2" />
                 </linearGradient>
                 </defs>

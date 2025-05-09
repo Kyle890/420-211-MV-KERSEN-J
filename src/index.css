@@ -29,3 +29,21 @@
 :root{
   font-family: var(--font-sans);
 }
+
+body {
+  overflow-x: hidden;
+}
+
+:root::-webkit-scrollbar {
+  width: 6px;
+}
+
+:root::-webkit-scrollbar-track {
+  background: #A9A9A9;
+  border-radius: 10px;
+}
+
+:root::-webkit-scrollbar-thumb {
+  background: #631d1dbe;
+  border-radius: 10px;
+}

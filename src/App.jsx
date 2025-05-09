@@ -16,7 +16,7 @@ export default function App() {
       <Suspense fallback={
           <div className="h-screen flex items-center justify-center"
             >
-              <span className="text-3xl font-bold text-center">Chargement...</span>
+              <h1 className="text-3xl font-bold">Chargement...</h1>
           </div>
         }>
         <Routes>
