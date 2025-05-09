@@ -2,6 +2,7 @@ import NyleKersenJoseph from "../assets/NyleKersenJoseph.svg"
 import useTypeWritter from "../hooks/useTypeWritter"
 import Riley from "../assets/Riley.jpg"
 import Cards from "./Cards"
+import { motion } from "motion/react"
 
 export default function BentoBox(){
 
@@ -31,7 +32,8 @@ export default function BentoBox(){
             <Cards />
           </div>
           <div className="col-span-1 row-span-2 col-start-4 row-start-2">
-            <img className="rounded-2xl shadow-md shadow-[#64040F] hover:shadow-[#64040F] hover:shadow-2xl" src={Riley} alt="" />
+            <motion.img className="rounded-2xl shadow-md shadow-[#64040F] hover:shadow-[#64040F] hover:shadow-2xl" src={Riley} alt="Avater" initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, transition:{duration: 2}}}/>
           </div>
         </div>
     )

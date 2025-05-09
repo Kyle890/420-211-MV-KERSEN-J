@@ -34,7 +34,7 @@ export default function Cards() {
 
   return (
     <div className="relative w-[250px] h-[300px] overflow-hidden rounded-lg shadow hover:shadow-2xl">
-      <div className="text-center font-bold text-lg py-2 border-b">Intérêts</div>
+      <div className="text-center font-bold text-lg py-2 border-b">Loisir</div>
 
       <motion.div
         className="flex"

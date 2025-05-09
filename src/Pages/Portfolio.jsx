@@ -1,6 +1,7 @@
 import useTypeWritter from "../hooks/useTypeWritter";
 import webDevelopperImg from "../assets/webDevelopperImg.svg"
 import BentoBox from "../Components/BentoBox.jsx"
+import { motion } from "motion/react"
 
 export default function Portfolio() {
   const phrases = [
@@ -21,7 +22,12 @@ export default function Portfolio() {
         </h1>
         </div>
         <div className="flex w-[35%] flex-col items-center">
-          <img src={webDevelopperImg} alt="webDevelopperImg" />
+          <motion.img 
+            src={webDevelopperImg} 
+            alt="webDevelopperImg" 
+            animate = {{scale: 1, transition: {duration: 1, type: "spring", stiffness: 80 }, translateX: 0}}
+            initial ={{scale: 0, translateX: 800}}
+          />
           <a href="https://storyset.com/online"><small>Online illustrations by Storyset</small></a>
         </div>
       </section>
