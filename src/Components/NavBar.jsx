@@ -5,7 +5,7 @@ export default function NavBar() {
   const links = [
     { to: "/Portfolio", label: "Portfolio" },
     { to: "/ProjectForm", label: "ProjectForm"},
-    { to: "/Interest", label: "Interest" }
+    { to: "/Interest", label: "InterestAPI" }
   ]
 
   return (
