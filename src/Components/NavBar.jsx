@@ -18,7 +18,8 @@ export default function NavBar() {
               className = "p-4 rounded relative"
             >
               {label}
-              <span className="absolute left-0 bottom-0 w-0 h-[5px] bg-[#042558] transition-all duration-500 group-hover:w-full"></span>
+              <span className="absolute top-0 left-0 h-0 w-[2px] bg-black transition-all duration-500 group-hover:h-full"></span>
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-black transition-all duration-500 group-hover:w-full"></span>
             </Link>
           </li>
         ))}
