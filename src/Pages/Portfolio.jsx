@@ -3,14 +3,16 @@ import webDevelopperImg from "../assets/webDevelopperImg.svg"
 import BentoBox from "../Components/BentoBox.jsx"
 import { motion } from "motion/react"
 
-export default function Portfolio() {
+export default function Portfolio( { user } ) {
+
   const phrases = [
-    "Bonjour, je suis un etudiant.",
+    `Bienvenue sur mon site ${user.name}`,
+    "Je suis encore un etudiant.",
     "Un futur ingénieur en informatique",
     "Bienvenue dans mon portfolio!"
   ];
 
-  const text = useTypeWritter(phrases);
+  const textes = useTypeWritter(phrases);
 
   return (
     <main>
@@ -18,7 +20,7 @@ export default function Portfolio() {
         <div className="flex w-[50%] justify-center items-center">
         <h1 className="font-extrabold text-3xl uppercase">
           {/*text-center bg-gradient-to-r from-pink-400 via-indigo-400 to-blue-400 bg-200% bg-clip-text text-transparent animate-gradient*/}
-          {text}
+          {textes}
         </h1>
         </div>
         <div className="flex w-[35%] flex-col items-center">

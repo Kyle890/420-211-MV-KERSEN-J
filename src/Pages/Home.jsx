@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 
 
 export default function Home(props) {
+  const navigate = useNavigate();
+  
   function signUp(event){
 
     event.preventDefault();
@@ -9,7 +12,8 @@ export default function Home(props) {
     const email = formData.get("Email");
   
     if (name && email) {
-      props.setUser({ name: name, email: email });
+      props.setUser({ name, email });
+      navigate('/Portfolio');
     } else {
       alert("Veuillez remplir tous les champs.");
     }

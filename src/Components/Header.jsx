@@ -4,7 +4,7 @@ export default function Header() {
   return (
         <>
             <header className='h-20 flex justify-evenly items-center bg-[#A9A9A9]'>
-                <h1 className='font-extrabold text-2xl text-black'>Kersen Joseph Website</h1>
+                <h1 className='font-bold text-2xl text-black'>Kersen Joseph Website</h1>
                 <NavBar></NavBar>
             </header>
             <svg
