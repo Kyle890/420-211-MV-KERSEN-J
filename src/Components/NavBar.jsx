@@ -12,7 +12,7 @@ export default function NavBar() {
     <nav>
       <ul className="flex justify-center items-center">
         {links.map(({ to, label }) => (
-          <li key={to} className="group m-4 text-white font-bold">
+          <li key={to} className="group m-4 text-black font-bold">
             <Link
               to = {to}
               className = "p-4 rounded relative"

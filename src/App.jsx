@@ -1,5 +1,5 @@
-import { Routes, Route } from "react-router-dom"
-import { Suspense, lazy } from "react"
+import { Routes, Route, useNavigate } from "react-router-dom"
+import { Suspense, lazy, useState, useEffect } from "react"
 import Home from './Pages/Home'
 import Header from "./Components/Header"
 import Footer from "./Components/Footer"
@@ -9,10 +9,21 @@ const Interest = lazy(() => import("./Pages/Interest"))
 
 export default function App() {
 
+  const [user, setUser] = useState({name: "", email: ""});
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user.name && user.email) {
+      navigate('/Portfolio');
+    } else {
+      navigate('/');
+    }
+  }, [user, navigate]);
+
   return (
    <div className="flex flex-col min-h-screen bg-[#E2E2E2]">
     <Header />
-    <div className="flex-grow">
+    <div className="flex flex-grow justify-center items-center">
       <Suspense fallback={
           <div className="h-screen flex items-center justify-center"
             >
@@ -20,7 +31,7 @@ export default function App() {
           </div>
         }>
         <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home setUser = { setUser }/>}/>
             <Route path="/Portfolio" element={<Portfolio />} />
             <Route path="/ProjectForm" element={<ProjectForm />} />
             <Route path="/Interest" element={<Interest />} />
