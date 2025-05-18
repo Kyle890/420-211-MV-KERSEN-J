@@ -11,7 +11,7 @@ export default function BentoBox(){
     const traitsDePersonalite = [
         "qui est curieux.",
         "qui est patient.",
-        "qui est créatif.",
+        "de créatif.",
         "qui aime la musique.",
         "qui s'adapte facilement.",
         "qui travaille bien en groupe",
