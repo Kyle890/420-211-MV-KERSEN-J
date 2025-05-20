@@ -7,7 +7,7 @@ export default function Portfolio( { user } ) {
 
   const phrases = [
     `Bienvenue sur mon site, ${user.name}`,
-    "Je suis encore un etudiant.",
+    "Je suis un etudiant.",
     "Un futur ingénieur en informatique",
     "Bienvenue dans mon portfolio!"
   ];
