@@ -7,6 +7,7 @@ import ProtectedRoute from "./Components/ProtectedRoute";
 const Portfolio = lazy(() => import("./Pages/Portfolio"));
 const ProjectForm = lazy(() => import("./Pages/ProjectForm"));
 const Interest = lazy(() => import("./Pages/Interest"));
+const NewsPage = lazy(() => import("./Pages/NewsPage"))
 
 export default function App() {
   const [user, setUser] = useState({ name: "", email: "" });
@@ -46,6 +47,14 @@ export default function App() {
               element={
                 <ProtectedRoute user={user}>
                   <Interest />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/NewsPage"
+              element={
+                <ProtectedRoute user={user}>
+                  <NewsPage />
                 </ProtectedRoute>
               }
             />
