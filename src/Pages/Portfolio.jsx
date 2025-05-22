@@ -3,7 +3,7 @@ import webDevelopperImg from "../assets/webDevelopperImg.svg"
 import BentoBox from "../Components/BentoBox.jsx"
 import { motion } from "motion/react"
 
-export default function Portfolio( { user } ) {
+export default function Portfolio( { user, projets } ) {
 
   const phrases = [
     `Bienvenue sur mon site, ${user.name}`,
@@ -34,6 +34,13 @@ export default function Portfolio( { user } ) {
       </section>
       <section className="flex gap-10 ml-[10%] mr-[10%] mt-5 mb-50 justify-center items-center w-[85%]">
         <BentoBox />
+      </section>
+      <section className="flex flex-row justify-center items-center m-10">
+        {projets.map((projet, index) => (
+          <div key={index}>
+            <h3>{projet.projectName}</h3>
+          </div>
+        ))}
       </section>
     </main>
   )
