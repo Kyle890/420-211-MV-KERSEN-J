@@ -4,6 +4,7 @@ import Home from './Pages/Home';
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import Projets from "./assets/Projets.js"
 const Portfolio = lazy(() => import("./Pages/Portfolio"));
 const ProjectForm = lazy(() => import("./Pages/ProjectForm"));
 const Interest = lazy(() => import("./Pages/Interest"));
@@ -11,6 +12,7 @@ const NewsPage = lazy(() => import("./Pages/NewsPage"))
 
 export default function App() {
   const [user, setUser] = useState({ name: "", email: "" });
+  const [projets, setProjets] = useState(Projets);
 
   return (
     <div className="flex flex-col min-h-screen bg-[#E2E2E2]">
@@ -30,7 +32,7 @@ export default function App() {
               path="/Portfolio"
               element={
                 <ProtectedRoute user={user}>
-                  <Portfolio user={user} />
+                  <Portfolio user={user} projets = {projets}/>
                 </ProtectedRoute>
               }
             />
@@ -38,7 +40,7 @@ export default function App() {
               path="/ProjectForm"
               element={
                 <ProtectedRoute user={user}>
-                  <ProjectForm />
+                  <ProjectForm setProjets = {setProjets}/>
                 </ProtectedRoute>
               }
             />
