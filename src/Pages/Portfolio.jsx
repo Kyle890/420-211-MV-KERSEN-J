@@ -35,13 +35,28 @@ export default function Portfolio( { user, projets } ) {
       <section className="flex gap-10 ml-[10%] mr-[10%] mt-5 mb-50 justify-center items-center w-[85%]">
         <BentoBox />
       </section>
-      <section className="flex flex-row justify-center items-center m-10">
+      <section className="flex flex-row justify-center items-center m-10 flex-wrap gap-6">
         {projets.map((projet, index) => (
-          <div key={index}>
-            <h3>{projet.projectName}</h3>
+          <div key={index} className="p-4 border rounded bg-white shadow w-96">
+            <h3 className="font-bold text-lg">{projet.projectName}</h3>
+            <p className="text-sm">{projet.description}</p>
+            <div className="flex flex-wrap gap-2 mt-2">
+              {projet.projectFiles && projet.projectFiles.map((url, idx) => (
+                <img
+                  key={idx}
+                  src={url}
+                  alt={`Fichier ${idx}`}
+                  className="w-24 h-24 object-cover rounded border"
+                />
+              ))}
+            </div>
+            <a className="text-blue-500 text-sm" href={projet.projectLink} target="_blank" rel="noopener noreferrer">
+              Voir le projet
+            </a>
           </div>
         ))}
       </section>
+
     </main>
   )
 }

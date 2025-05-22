@@ -6,7 +6,7 @@ const Projets = [
         IDE: 'VS Code',
         frameworks: ["React"],
         projectLink: 'https://github.com/Kyle890/211_TPS_JosephKersen/tree/TP1',
-        projectFiles: []
+        projectFiles: ""
     },
     {
         projectName: 'TP2',
@@ -15,7 +15,7 @@ const Projets = [
         IDE: 'VS Code',
         frameworks: ["React"],
         projectLink: 'https://github.com/Kyle890/211_TPS_JosephKersen/tree/TP2',
-        projectFiles: []
+        projectFiles: ""
     },
     {
         projectName: 'TP3',
@@ -24,7 +24,7 @@ const Projets = [
         IDE: 'VS Code',
         frameworks: ["React","Tailwind"],
         projectLink: 'https://github.com/Kyle890/211_TPS_JosephKersen/tree/TP3',
-        projectFiles: []
+        projectFiles: ""
     },
 ]
 
