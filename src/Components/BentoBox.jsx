@@ -44,7 +44,6 @@ export default function BentoBox(){
             <button onClick={copyText} className="p-2">
               <img className="w-8 h-6 p-1 bg-gray-400 rounded" src={imgClipboard} alt="Copy to clipboard" />
             </button>
-
             </p>
           </div>
           <div className="col-span-1 row-span-1 col-start-4 flex justify-center items-center">

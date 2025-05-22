@@ -19,7 +19,6 @@ export default function Portfolio( { user } ) {
       <section className="flex flex-row gap-10 ml-[10%] mr-[10%] mt-8 mb-50">
         <div className="flex w-[50%] justify-center items-center">
         <h1 className="font-extrabold text-3xl uppercase">
-          {/*text-center bg-gradient-to-r from-pink-400 via-indigo-400 to-blue-400 bg-200% bg-clip-text text-transparent animate-gradient*/}
           {textes}
         </h1>
         </div>
