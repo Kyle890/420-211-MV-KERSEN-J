@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
-import { animate } from "motion";
 
 export default function Interest({ setPage }) {
   const APIKey = "apiKey=71e2d237466d485fa65283b702d2d872";
@@ -80,12 +79,14 @@ export default function Interest({ setPage }) {
                 <p className="text-xs text-gray-500 mb-2">
                   {new Date(news.publishedAt).toLocaleString()}
                 </p>
-                <button
+                <motion.button
                   onClick={() => openPage(news.url)}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className="inline-block bg-gray-400 text-white text-sm px-4 py-2 rounded hover:bg-gray-800 transition-colors duration-300"
                 >
                   Lire l'article
-                </button>
+                </motion.button>
               </div>
             </div>
           </motion.li>
