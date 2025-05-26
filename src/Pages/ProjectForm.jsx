@@ -1,4 +1,5 @@
 import { motion } from "motion/react"
+import OnlyYou from "../assets/OnlyYou.mp3"
 
 export default function ProjectForm({ setProjets }){
 
@@ -31,6 +32,7 @@ export default function ProjectForm({ setProjets }){
     return(
         <motion.form className='flex flex-col p-8 bg-[#E2E2E2]/80 bg-blur-lg rounded-xl shadow-gray-500 shadow-2xl border border-gray-300 w-[45%]' initial={{translateY : 200}} animate={{translateY: 0}} onSubmit  = {handleSubmit}>
             <h2 className="text-3xl font-bold m-3">Ajouter un projet</h2>
+            <audio controls autoPlay loop src={OnlyYou}></audio>
             <label className="m-3">Nom du projet:
                 <input 
                     type="projectName" 

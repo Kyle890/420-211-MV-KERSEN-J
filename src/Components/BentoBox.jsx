@@ -2,6 +2,7 @@ import NyleKersenJoseph from "../assets/NyleKersenJoseph.svg"
 import useTypeWritter from "../hooks/useTypeWritter"
 import { motion } from "motion/react"
 import Riley from "../assets/Riley.jpg"
+import Huey from "../assets/Huey.jpg"
 import clipboardCheck from "../assets/clipboardCheck.svg"
 import clipboard from "../assets/clipboard.svg"
 import { useState } from "react"
@@ -30,6 +31,8 @@ export default function BentoBox(){
 
     const [imgClipboard, setImgClipboard] = useState(clipboard);
 
+    const [boondocks, setBoondocks] = useState(Riley)
+
     return(
         <div className="grid grid-cols-4 grid-rows-4 gap-4 w-[80%] h-[600px]">
           {/* Créer une bento-box 4 colonnes et 4 rangée plus petites rangées  */}
@@ -40,11 +43,13 @@ export default function BentoBox(){
             <h3>Nyle Kersen Joseph</h3>
             <p>Lieu d'habitation : <strong>Montréal</strong></p>
             <p>Étudiant au Cégep <strong>Marie-Victorin</strong></p>
-            <p>Pour me contacter : {email} 
-            <button onClick={copyText} className="p-2">
-              <img className="w-8 h-6 p-1 bg-gray-400 rounded" src={imgClipboard} alt="Copy to clipboard" />
-            </button>
-            </p>
+            <p>Pour me contacter :</p>
+            <div className="flex items-center gap-2">
+              <span>{email}</span>
+              <button onClick={copyText} className="p-2">
+                <img className="w-8 h-6 p-1 bg-gray-400 rounded" src={imgClipboard} alt="Copy to clipboard" />
+              </button>
+            </div>
           </div>
           <div className="col-span-1 row-span-1 col-start-4 flex justify-center items-center">
           <motion.p className="font-bold" initial={{ opacity: 0 }} whileInView={{ opacity: 1, transition: { duration: 2 } }}>
@@ -56,8 +61,15 @@ export default function BentoBox(){
           <div className="col-span-1 row-span-2 col-start-2 bg-blue-500"> 5 </div>
           <div className="col-span-1 row-span-2 col-start-3 bg-blue-500"> 6 </div>
           <div className="col-span-1 row-span-2 col-start-4 row-start-2">
-            <motion.img className="rounded-2xl shadow-md shadow-[#64040F] hover:shadow-[#64040F] hover:shadow-2xl" src={Riley} alt="Avater" initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition:{duration: 2}}}/>
+            <motion.img 
+              className="rounded-2xl shadow-md shadow-[#64040F] hover:shadow-[rgb(98,65,27)] hover:shadow-2xl" 
+              src={boondocks} 
+              alt="Avater" 
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1, transition:{duration: 2}}}
+              onHoverStart={() => setBoondocks(Huey)}
+              onHoverEnd={() => setBoondocks(Riley)}
+            />
           </div>
         </div>
     )
