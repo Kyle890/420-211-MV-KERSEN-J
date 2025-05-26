@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 // Je crée un hook, car c'est un code que je risque surement d'utliser dans une autre page.
-export default function useTypeWritter(phrases){
+export default function useTypeWritterInfinite(phrases){
 
     const [text, setText] = useState("");
     const [phraseIndex, setPhraseIndex] = useState(0);

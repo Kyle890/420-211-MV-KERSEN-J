@@ -16,7 +16,7 @@ export default function Footer() {
             <ul className="flex gap-4">
                 {logos.map(({ link, img, text }) => (
                     <li key={text}>
-                        <a href={link} target="_blank"><img className="h-11 rounded-2xl" src={img} alt= {text}/></a>
+                        <a href={link} target="_blank" rel="noopener noreferrer"><img className="h-11 rounded-2xl" src={img} alt= {text}/></a>
                     </li>
                 ))}
             </ul>
