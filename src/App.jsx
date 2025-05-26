@@ -5,10 +5,12 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import Projets from "./assets/Projets.js"
+import ScrollToTopButton from "./Components/ScrollToTopButton.jsx";
 const Portfolio = lazy(() => import("./Pages/Portfolio"));
 const ProjectForm = lazy(() => import("./Pages/ProjectForm"));
 const Interest = lazy(() => import("./Pages/Interest"));
 const NewsPage = lazy(() => import("./Pages/NewsPage"))
+
 
 export default function App() {
   const [user, setUser] = useState({ name: "", email: "" });
@@ -63,6 +65,7 @@ export default function App() {
           </Routes>
         </Suspense>
       </div>
+      <ScrollToTopButton />
       <Footer />
     </div>
   );

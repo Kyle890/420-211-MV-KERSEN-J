@@ -5,7 +5,7 @@ export default function ListeProjets({ projets }) {
   return (
     <div className="flex justify-center items-center flex-wrap gap-4">
       {projets.map((projet, index) => (
-        <div key={index} className="p-4 border rounded bg-white shadow w-96 h-96">
+        <div key={index} className="p-4 border rounded bg-white shadow w-96 min-h-96 max-h-[450px]">
           <h3 className="font-bold text-lg">{projet.projectName}</h3>
           <p className="text-sm">{projet.description}</p>
 

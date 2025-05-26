@@ -6,7 +6,6 @@ export default function Interest({ setPage }) {
   const APIKey = "apiKey=71e2d237466d485fa65283b702d2d872";
   const [motCle, setMotCle] = useState("");
   const [date, setDate] = useState("");
-  const [pays, setPays] = useState("");
   const [newsData, setNewsData] = useState([]);
   const [nbArticles, setNbArticles] = useState("...");
   const [visibleNews, setVisibleNews] = useState(20);
@@ -15,7 +14,13 @@ export default function Interest({ setPage }) {
     async function fetchData() {
       if (motCle !== "") {
         try {
-          const res = await fetch(`https://newsapi.org/v2/everything?q=${motCle}&${APIKey}`);
+          let url = `https://newsapi.org/v2/everything?q=${motCle}`;
+          if (date) {
+            url += `&from=${date}&sortBy=publishedAt`;
+          }
+          url += `&${APIKey}`;
+
+          const res = await fetch(url);
           const data = await res.json();
           setNewsData(data.articles);
           setNbArticles(" " + data.totalResults);
@@ -27,13 +32,15 @@ export default function Interest({ setPage }) {
     }
 
     fetchData();
-  }, [motCle]);
+  }, [motCle, date]);
 
   function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
     const recherche = formData.get("motRecherche");
+    const selectedDate = formData.get("date");
     setMotCle(recherche);
+    setDate(selectedDate);
   }
 
   const navigate = useNavigate();
@@ -45,15 +52,29 @@ export default function Interest({ setPage }) {
   return (
     <section className="flex flex-col w-full h-full">
       <h2 className="text-6xl font-bold ml-4">K.NEWS</h2>
-      <p className="ml-4">Objectif: Chercher les nouvelles en ligne à l'aide de mots-clés et de filtres simples</p>
+      <p className="ml-4">
+        Objectif: Chercher les nouvelles en ligne à l'aide de mots-clés et d'un filtre de date
+      </p>
       <hr className="h-1 bg-black w-full" />
-      <form className="flex justify-center items-center flex-col m-4" onSubmit={handleSubmit}>
+      <form
+        className="flex justify-center items-center flex-col m-4"
+        onSubmit={handleSubmit}
+      >
         <input
           className="border-[2px] m-2 h-8 w-[35%] p-2 rounded"
           type="text"
           name="motRecherche"
           placeholder="Tapez un mot-clé pour filtrer les actualités (ex : Tesla, Apple)"
         />
+
+        {/* Filtre Date */}
+        <input
+          className="border-[2px] m-2 h-8 w-[35%] p-2 rounded"
+          type="date"
+          name="date"
+          max={new Date().toISOString().split("T")[0]} // Pas de date future
+        />
+
         <p>Nombre d'articles trouvés{nbArticles}</p>
         <button className="bg-gray-500 h-10 w-70 rounded text-white font-bold hover:bg-gray-800 transition-all duration-500">
           Search

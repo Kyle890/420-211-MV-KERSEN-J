@@ -16,7 +16,11 @@ Premiere semaine :
 Deuxième semaine : 
 + J'ai reccomencer mon site et bien avancé mais mon ordi a la maison a crash donc j'ai tout perdu et je recommence a partir de ce que j'avais push.
 + J'ai fait la page de connexion et permis qu'elle te change de page
-+ Tester three js ifc loader
+
+Troisième semaine : 
++ J'ai continuer le site.
++ J'ai fait le ProjectForm au complet et rajoute une musique d'ambiance (ascenceur/jazz)
++ J'ai rajoute la section parcours et Projets dans mon portfolio
 
 # Gérer et créer un API
 L'API que j'ai choisi est News API
