@@ -21,6 +21,8 @@ Troisième semaine :
 + J'ai continuer le site.
 + J'ai fait le ProjectForm au complet et rajoute une musique d'ambiance (ascenceur/jazz)
 + J'ai rajoute la section parcours et Projets dans mon portfolio
++ Ajout du filtre dans Interest pour les dates
++ Ajout d'une fleche pour remonter en haut
 
 # Gérer et créer un API
 L'API que j'ai choisi est News API
